@@ -8,7 +8,7 @@ file=[] #список для файла
 with open('text.txt', 'r') as file:
     while a!=False:
         listik= file.readline()
-        listik = re.findall(r"\d{1,7}[02468]",listik)
+        listik = re.findall(r"\d{0,6}[02468]{1}",listik)
         if len(listik)==0:  #проверка на пустой файл
             print('файл пустой')
             a=False
